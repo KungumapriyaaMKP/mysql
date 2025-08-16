@@ -1,0 +1,7 @@
+select
+(                 --select iniside another selecr return either value or null
+select distinct salary   
+from Employee 
+order by salary desc 
+limit 1 Offset 1)      --offest - 1 :  means skips 1
+as SecondHighestSalary;
