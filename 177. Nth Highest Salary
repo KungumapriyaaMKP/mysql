@@ -1,0 +1,11 @@
+CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT         --function
+BEGIN
+declare x int;       --declare a variable by DECLARE
+set x = N-1;         --assign value to the variable by SET
+  RETURN (
+     select distinct Salary 
+     from employee
+     order by Salary desc
+     limit 1 offset x
+  );
+END;
