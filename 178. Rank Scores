@@ -1,0 +1,16 @@
+select score ,                               
+dense_rank() over (order by score desc) as `rank`   
+from Scores;
+
+/*
+DENSE_RANK() is a window function, and all window functions must use the OVER clause. The OVER clause tells SQL:
+
+How to rank the rows (using ORDER BY)
+
+-------------------------------------------------------
+
+BACKTICK : if the col name you are giving is a reserved keyword in sql just use backtick eg : `rank`
+
+-------------------------------------------------------
+
+*/
